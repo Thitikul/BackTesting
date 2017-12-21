@@ -9,16 +9,9 @@ namespace GF.BackTesting {
       : EventArgs {
 
         public NewPriceEventArgs(PriceItem item) {
-            Date = item.Date;
-            Last = item.Last;
-            Bid = item.Bid;
-            Offer = item.Offer;
+            NewPrice = item;
         }
 
-        public DateTime Date { get; }
-        public decimal Last { get; }
-        public decimal Bid { get; } // ราคาเสนอซื้อ
-        public decimal Offer { get; } // ราคาเสนอขาย
-
+        public PriceItem NewPrice { get; }
     }
 }

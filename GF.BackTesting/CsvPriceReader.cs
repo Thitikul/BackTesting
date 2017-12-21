@@ -14,8 +14,12 @@ namespace GF.BackTesting {
         }
 
         public override void Start() {
-            base.Start();
+            RaiseSeedPrices();
+            RaisePricesFromCsv();
+            RaiseStopper();
+        }
 
+        private void RaisePricesFromCsv() {
             // read csv file line-by-line.
             using (var reader = new StreamReader(fileName)) {
                 string s;
@@ -37,6 +41,5 @@ namespace GF.BackTesting {
                 }
             }
         }
-        
     }
 }

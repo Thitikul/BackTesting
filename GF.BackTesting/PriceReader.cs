@@ -34,10 +34,18 @@ namespace GF.BackTesting {
         }
 
         public virtual void Start() {
+            RaiseSeedPrices();
+            RaiseStopper();
+        }
+
+        protected void RaiseSeedPrices() {
             foreach (var p in prices) {
-                var e = new NewPriceEventArgs(p);
-                NewPrice?.Invoke(this, e);
+                RaiseNewPrice(p);
             }
+        }
+
+        protected void RaiseStopper() {
+            RaiseNewPrice(null);
         }
     }
 }

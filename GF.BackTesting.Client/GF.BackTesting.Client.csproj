@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1885F0B-0693-4A9C-ABE5-ECC75A9ADE20}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GF.BackTesting</RootNamespace>
-    <AssemblyName>GF.BackTesting</AssemblyName>
+    <ProjectGuid>{9135C0C7-13F0-4778-B599-DC684425284D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GF.BackTesting.Client</RootNamespace>
+    <AssemblyName>GF.BackTesting.Client</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -40,19 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CandleStickColor.cs" />
-    <Compile Include="CandleStickItem.cs" />
-    <Compile Include="CandleStickReader.cs" />
-    <Compile Include="CsvPriceReader.cs" />
-    <Compile Include="InMemoryPriceReader.cs" />
-    <Compile Include="NewCandleStickEventArgs.cs" />
-    <Compile Include="NewPriceEventArgs.cs" />
-    <Compile Include="PriceItem.cs" />
-    <Compile Include="PriceReader.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GF.BackTesting.Facts\GF.BackTesting.Facts.csproj">
+      <Project>{48db07c7-f7ec-4698-9503-a1f19892cdc8}</Project>
+      <Name>GF.BackTesting.Facts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GF.BackTesting\GF.BackTesting.csproj">
+      <Project>{c1885f0b-0693-4a9c-abe5-ecc75a9ade20}</Project>
+      <Name>GF.BackTesting</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

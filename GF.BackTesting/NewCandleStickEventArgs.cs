@@ -3,10 +3,10 @@
 namespace GF.BackTesting {
     public class NewCandleStickEventArgs : EventArgs {
 
-        public NewCandleStickEventArgs(CandleStickItem candleStickItem) {
-            CandleStickItem = candleStickItem;
+        public NewCandleStickEventArgs(CandleStickItem candleStick) {
+            CandleStick = candleStick;
         }
 
-        public CandleStickItem CandleStickItem { get; }
+        public CandleStickItem CandleStick { get; }
     }
 }

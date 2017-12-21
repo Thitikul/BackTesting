@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GF.BackTesting", "GF.BackTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GF.BackTesting.Facts", "GF.BackTesting.Facts\GF.BackTesting.Facts.csproj", "{48DB07C7-F7EC-4698-9503-A1F19892CDC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GF.BackTesting.Client", "GF.BackTesting.Client\GF.BackTesting.Client.csproj", "{9135C0C7-13F0-4778-B599-DC684425284D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C1885F0B-0693-4A9C-ABE5-ECC75A9ADE20} = {C1885F0B-0693-4A9C-ABE5-ECC75A9ADE20}
+		{48DB07C7-F7EC-4698-9503-A1F19892CDC8} = {48DB07C7-F7EC-4698-9503-A1F19892CDC8}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,10 @@ Global
 		{48DB07C7-F7EC-4698-9503-A1F19892CDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48DB07C7-F7EC-4698-9503-A1F19892CDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48DB07C7-F7EC-4698-9503-A1F19892CDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9135C0C7-13F0-4778-B599-DC684425284D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9135C0C7-13F0-4778-B599-DC684425284D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9135C0C7-13F0-4778-B599-DC684425284D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9135C0C7-13F0-4778-B599-DC684425284D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
